@@ -50,28 +50,6 @@ router.delete("/deleteTodo", async function (req, res) {
         })
     }
 
-    // const id = req.params.id;
-    // console.log("Deleting Todo with ID:", id);
-    // console.log(id);
-    // try {
-    //     const result = await todoModel.findByIdAndDelete(id);
-    //     if (!result) {
-    //         return res.json({
-    //             message: "Todo not found!"
-    //         })
-    //     }
-    //     else {
-    //         return res.json({
-    //             message: "Todo Deleted!"
-    //         })
-    //     }
-    // }
-    // catch(e){
-    //     return res.json({
-    //         message:"Error Deleting Todo"
-    //     })
-    // }
-
 })
 
 module.exports = {
