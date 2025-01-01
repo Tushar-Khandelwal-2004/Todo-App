@@ -38,14 +38,14 @@ function App() {
       <ul>
         {todos.map((todo) => (
           <div className="todo-item">
-          <li key={todo.id}>{todo.title}
-            <button onClick={() => deleteTodo(todo.id)}>Delete</button>
+          <li className="list" key={todo.id}>{todo.title}
+            <button className="dltbtn" onClick={() => deleteTodo(todo.id)}>Delete</button>
           </li>
           </div>
         ))}
       </ul>
-      <div>
-        <input type="text" value={newTodo} placeholder="Type your todo here" onChange={(e) => setNewTodo(e.target.value)} />
+      <div className="addtodo">
+        <input type="text" value={newTodo} placeholder="Type your Todo here!" onChange={(e) => setNewTodo(e.target.value)} />
         <button onClick={addTodo}>Add Todo</button>
       </div>
     </div>

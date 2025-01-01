@@ -1,148 +1,98 @@
-/* Reset some default styles */
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=MuseoModerno:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=MuseoModerno:ital,wght@0,100..900;1,100..900&family=Playwrite+ES+Deco+Guides&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=MuseoModerno:ital,wght@0,100..900;1,100..900&family=Playwrite+ES+Deco+Guides&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 * {
-    margin: 0;
-    padding: 0;
-    /* box-sizing: border-box; */
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #8686ca;
-    display: flex;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
-  }
-  /* #main{
-    width: 100vh;
-    background-color: burlywood;
+  margin: 0;
+  padding: 0;
+}
 
-  }
-  #heading{
-    display: flex;
-    justify-content: center;
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    font-weight: 800;
-    font-size: larger;
-  }
-  ul{
-    list-style-type: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 1vh;
-  }
-  .todo-item{
-    padding-left: 3vh;
-    padding-right: 3vh;
-  }
-  .todo-item li{
-    background-color: aqua;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  } */
+body {
+  font-family: "Space Mono", serif;
+  font-style: normal;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
 
+#main {
+  width: 100vh;
 
+}
 
+#heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat", serif;
+  font-weight: 0;
+  font-size: 5vh;
 
+}
 
+ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.5vh;
+  padding-top: 3vh;
+  padding-bottom: 3vh;
+}
 
+.todo-item {
+  padding-left: 3vh;
+  padding-right: 3vh;
+}
 
+.todo-item li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5vh;
+}
 
+button {
+  background: none;
+  background-color: white;
+  cursor: pointer;
+  border: none;
+  height: 100%;
+  width: 15vh;
+  color: rgb(56, 50, 50);
+  text-decoration: underline;
+  text-decoration-thickness: 0.5px;
+  text-underline-offset: 6px;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
 
+button:hover {
+  text-decoration: none;
+  color: solid black;
 
-  /* Main container for the app */
+}
 
-  
-  /* Title of the app */
-  /* h1 {
-    font-size: 24px;
-    color: #333;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  /* Todo list container */
-  /* ul {
-    list-style: none;
-    padding-left: 0;
-  } */
-  
-  /* li {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 12px;
-    background-color: #f9f9f9;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    font-size: 16px;
-    color: #333;
-    transition: background-color 0.2s ease;
-  }
-  
-  li:hover {
-    background-color: #f1f1f1;
-  }
-  
-  /* Button styling */
-  /* button {
-    background-color: #e74c3c;
-    color: white;
-    border: none;
-    padding: 6px 12px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  } */
+.addtodo {
+  height: 5vh;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 3vh;
+  padding-right: 3vh;
+}
 
-  /* button:hover {
-    background-color: #c0392b;
-  } */
-  
-  /* Input and Add Todo button container */
-  /* div input,
-  div button {
-    width: 100%;
-    padding: 10px;
-    margin-top: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 16px;
-  }
-  
-  div input {
-    margin-bottom: 10px;
-  }
-  
-  div button {
-    background-color: #2ecc71;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-  
-  div button:hover {
-    background-color: #27ae60;
-  } */
-  
-  /* Responsive design for smaller screens */
-  /* @media (max-width: 600px) {
-    .App {
-      padding: 15px;
-    }
-  
-    h1 {
-      font-size: 20px;
-    }
-  
-    li {
-      font-size: 14px;
-    }
-  
-    div input,
-    div button {
-      font-size: 14px;
-    }
-  } */
+.addtodo button {
+  width: 15vh;
+
+}
+
+.addtodo input {
+  width: calc(100%-15vh);
+}
+
+input {
+  border: none;
+  outline: none;
+}
